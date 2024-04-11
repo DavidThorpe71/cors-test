@@ -1,0 +1,12 @@
+<script>
+  const dt = async () => {
+    const apiRes = await fetch("http://localhost:3030/api", {
+      credentials: "include"
+    })
+
+    const text = await apiRes.text()
+    console.log(text)
+    return "blah"
+  }
+</script>
+<button onclick="dt()">click me</button>
